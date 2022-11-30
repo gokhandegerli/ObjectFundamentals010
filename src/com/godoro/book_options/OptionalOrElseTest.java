@@ -9,6 +9,7 @@ public class OptionalOrElseTest {
         System.out.println("Ya da değilse değer: "+value);
     }
 
+    public int deneme;
 
 
 
