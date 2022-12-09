@@ -50,11 +50,13 @@ public class Test {
         department.employeeList.add(employee5);
         department.employeeList.add(employee6);
 
-       List<Employee> employeeList2 = department.employeeList.stream().
-               filter(employee -> employee.age==null).toList();
+       List<Employee> employeeList2 = department.employeeList.stream()
+                                        .filter(employee -> employee.age==null).toList();
 
        for (Employee employee: employeeList2) {
            System.out.println(employee.name);
+           System.out.println(employee.surName);
+           System.out.println(employee.age);
        }
 
 

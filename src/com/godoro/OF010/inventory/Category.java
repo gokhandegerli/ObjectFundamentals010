@@ -5,7 +5,7 @@ import java.util.List;
 public class Category {
 
     private long categoryId;
-    private String categorName;
+    private String categoryName;
     private List<Product> productList;
 
 
@@ -13,9 +13,9 @@ public class Category {
     public Category() {
     }
 
-    public Category(long categoryId, String categorName) {
+    public Category(long categoryId, String categoryName) {
         this.categoryId = categoryId;
-        this.categorName = categorName;
+        this.categoryName = categoryName;
     }
 
     public List<Product> getProductList() {
@@ -34,11 +34,11 @@ public class Category {
         this.categoryId = categoryId;
     }
 
-    public String getCategorName() {
-        return categorName;
+    public String getCategoryName() {
+        return categoryName;
     }
 
-    public void setCategorName(String categorName) {
-        this.categorName = categorName;
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
     }
 }

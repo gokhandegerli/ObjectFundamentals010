@@ -1,6 +1,8 @@
 package com.godoro.OF010.inventory;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Stream;
 
 public class Test {
 
@@ -30,13 +32,25 @@ public class Test {
 
 
         System.out.println(categoryA.getCategoryId());
-        System.out.println(categoryA.getCategorName());
+        System.out.println(categoryA.getCategoryName());
         System.out.println("----------------------");
 
-        for (Product product : categoryA.getProductList()) {
+/*        for (Product product : categoryA.getProductList()) {
             System.out.println(product.getProductId() + " "
                     + product.getProductName() + " " + product.getSalesPrice());
-        }
+        }*/
+
+        categoryA.getProductList().stream()
+                .map(Product::getProductName)
+                .forEach(System.out::println);
+
+        List<String> products = categoryA.getProductList().stream()
+                .flatMap(product -> Stream.of(product.getProductName(),Long.toString(product.getProductId())))
+                //.forEach(System.out::println);
+                .toList();
+
+        products.stream()
+                .forEach(System.out::println);
 
     }
 
