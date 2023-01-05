@@ -29,6 +29,7 @@ public class Test {
         factMethods.list = List.of("1","2","3");
         //factMethods.list.add("1"); List.of'a ekleme yapılamaz, çünkü final.
         printList(factMethods.list);
+        System.out.println(factMethods.getClass());
 
 
 
